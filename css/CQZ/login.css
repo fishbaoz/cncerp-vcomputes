@@ -1,0 +1,107 @@
+/* $Id: login.css for CNCERP  2013-12-21 23:38:28Z cncerp CQZ $*/
+
+*{margin: 0px;padding: 0px;outline: none;}
+body{
+    background: #001b32;
+	}
+#container {
+    color:#ffffff;
+	text-align: left;
+	margin: 70px auto 0px auto;
+	padding: 40px 0 36px 0;
+	z-index: 1000;
+	width: 400px;
+    }
+#login_logo {
+	width: 100%;
+	height: 85px;
+	margin: 0 0 20px 0; /* top margin in FF3 is from body but in IE8 is from container */
+	background:  url(../logo.png) no-repeat 50% 50%; /* -repeat-x left bottom- not needed cause now img equals div */
+    }
+
+#login_box{
+    border: 1px solid #070545;
+	width: 250px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	background: -moz-linear-gradient(19% 75% 90deg,#001b32, #005ca8);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#005ca8), to(#001b32));
+	margin: 50px auto;padding: 20px;
+	-moz-box-shadow: 0px -5px 300px #070545;
+	-webkit-box-shadow: 0px -5px 300px #070545;
+	}
+select {
+	-webkit-transition-property: -webkit-box-shadow, background;
+	-webkit-transition-duration: 0.25s;
+	width: 190px;
+	height: 35px;
+	font: 28px "Lucida Grande", "Arial", "Helvetica", "Verdana", "sans-serif";
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#005ca8), to(#0077d9));
+	background: -moz-linear-gradient(19% 75% 90deg,#0077d9, #005ca8);
+	color: #fff;
+	text-shadow: #000 1px 1px;
+	border-top: 1px solid #1194ff;
+	margin: 10px 0 35px 0;
+    }
+
+input{
+    -webkit-transition-property: -webkit-box-shadow, background;
+	-webkit-transition-duration: 0.25s;padding: 6px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 1px solid #1194ff;
+	-moz-box-shadow: 0px 0px 2px #000;
+	-webkit-box-shadow: 0px 0px 2px #000;
+	margin-bottom: 10px;
+	background: #a2d5ff;
+	width: 230px;
+	}
+
+input[type="submit"]{
+    background-color: #759ae9;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
+    background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    border-top: 1px solid #1f58cc;
+    border-right: 1px solid #1b4db3;
+    border-bottom: 1px solid #174299;
+    border-left: 1px solid #1b4db3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    color: #fff;
+    font-size:16px;
+    padding: 7px 0;
+    text-shadow: 0 -1px 1px #1a5ad9;
+    width: 150px;
+    margin-left:90px;}
+input[type="submit"]:hover {
+    background-color: #5d89e8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d89e8), color-stop(50%, #2261e0), color-stop(50%, #044bd9), color-stop(100%, #0d53de));
+    background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -moz-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -ms-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -o-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    cursor: pointer; }
+input[type="submit"]:active {
+    border-top: 1px solid #1b4db3;
+    border-right: 1px solid #174299;
+    border-bottom: 1px solid #133780;
+    border-left: 1px solid #174299;
+    -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee; } 
+    }
+input: hover{
+    -webkit-box-shadow: 0px 0px 4px #000;
+	background: #9d39e1;
+	}	
+#demo_text {
+	margin: 0 0 0 50px;
+	width: 200px;
+    }
+/*END*/

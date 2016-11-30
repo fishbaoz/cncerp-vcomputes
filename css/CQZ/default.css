@@ -1,0 +1,587 @@
+/*
+2013-01-24 CQZ*/
+
+body{
+font-family:Arial, Verdana, Helvetica, sans-serif;
+font-size:16px;
+margin:10px;
+background:url(images/desk.jpg) #631;
+}
+
+a{
+color:blue;
+text-decoration:none;
+}
+a:hover{
+color:red;
+text-decoration:underline;
+}
+
+img{
+border:none;
+vertical-align:middle;
+}
+
+p{
+}
+p.page_title_text {
+color:black;
+font-weight:bold;
+margin:5px auto;
+padding:5px;
+text-align:center;
+}
+p.good {
+font-weight: bold;
+color: green;
+}
+p.bad {
+font-weight: bold;
+color:red;
+}
+
+table{ 
+background:url(images/wood.jpg) ;
+box-shadow:0px 0px 14px  #3B0B2E;
+text-align:center;
+width:auto;
+max-width:90%;
+margin:5px auto;
+padding:1px;
+}
+table .selection{ 
+
+box-shadow:0px 0px 14px  #3B0B2E;
+}
+
+th { 
+background:url(images/desk.jpg) ;
+border:2px outset #feb;/*立体边*/
+padding:1px ;
+font-weight:bold;
+font-size: 16px;
+color: white;
+text-align: center;
+}
+th.number {
+text-align: right;
+font-weight: normal;
+background-color: #003C80;
+color: white;
+}
+td {
+text-align: left;
+border-bottom:thin solid #CCCAF5;/*普通表格下边*/
+}
+td.select {
+
+}
+td.number {
+text-align: right;
+}
+.centre{
+text-align:center;
+margin:5px;
+}
+/*————————————————————————————————————————*/
+input[type="text"],input[type="password"],input[type="radio"],input[type="file"],input[type="checkbox"]
+{
+font-family: Arial, Verdana, Helvetica, sans-serif;;
+font-size: 16px;
+border:1px inset #0000ff;/*边*/
+padding:3px 7px 3px 7px;
+}
+
+input[type="text"]:Focus,
+input[type="password"]:Focus,
+input[type="radio"]:Focus,
+input[type="file"]:Focus,
+input[type="checkbox"]:Focus
+{ font-family: Arial, Verdana, Helvetica, sans-serif;;
+font-size: 16px;
+border:1px solid #e30000;
+box-shadow: 0px 0px 5px #ff00ff inset; /* 阴影 */
+padding:3px 7px 3px 7px;
+ }
+
+
+input[type="submit"]
+{
+font-size: 16px;
+background:url(images/wood.jpg) ;
+border:1px outset #feb;/*立体边*/
+border-radius:7px ;/*圆角*/
+padding:3px 7px 3px 7px;
+box-shadow: 2px 2px 6px #3B0B2E; /* 阴影 */
+}
+input[type="submit"]:hover{
+font-size: 16px;
+background:url(images/wood.jpg) ;
+border:1px outset #feb;/*立体边*/
+border-radius:7px ;/*圆角*/
+padding:3px 7px 3px 7px;
+box-shadow: 2px 2px 12px red; /* 阴影 */
+color:red;
+}
+
+/*_________________________________________________________________*/
+
+input.number{
+text-align: right;
+}
+input.image {
+border-width:0px;
+background-color: transparent;
+}
+
+input:active{
+background:#DFFF91;/*输入焦点内浅底*/
+font-family: Arial, Verdana, Helvetica, sans-serif;;
+font-size: 16px;
+}
+/*_______________________________________________________________________*/
+select {  
+width: 268px;
+padding: 1px; 
+font-size: 16px; 
+border: 1px solid #0000ff; 
+} 
+/*——————————————————————————————————————*/
+
+select:hover { /* drop down */
+background:#A2C4FD;/*下拉焦点*/
+}
+
+textarea{
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 16px;
+}
+textarea:hover{
+background:#B0F4F9;/*文本输入*/
+}
+
+.EvenTableRows {
+background-color: white;/*表格深色*/
+}
+.OddTableRows {
+background-color: #BFDEF9;/*表格浅色*/
+}
+
+div{
+}
+div.error {
+background-color:#FBADAF;
+color: red;
+border: 1px solid red;
+box-shadow:3px 3px 4px;
+margin:0 auto 10px;
+padding:10px;
+width:80%;
+}
+div.warn {
+background-color:#f5dbfd;
+color: maroon;
+border: 1px solid maroon;
+box-shadow:3px 3px 4px;
+margin:0 auto 10px;
+padding:10px;
+width:80%;
+}
+div.success {
+background-color:#b9ecb4;
+color: darkgreen;
+border: 1px solid darkgreen;
+box-shadow:3px 3px 4px;
+margin:0 auto 10px;
+padding:10px;
+width:80%;
+}
+div.info {
+background-color:#C7CCF6;
+border:0 solid navy;
+color:navy;
+box-shadow:3px 3px 4px;
+margin:0 auto 10px;
+padding:10px;
+width:80%;
+}
+DIV.page_help_text {
+background: lightgrey url(images/help.png) top left no-repeat;
+BORDER: #a52a2a 1px solid;
+padding-top:2px;
+padding-bottom: 2px;
+PADDING-LEFT: 10px;
+Z-INDEX: 1;
+FLOAT: none;
+VISIBILITY: visible;
+POSITION: static;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-weight: normal;
+font-size: 16px;
+color: black;
+TEXT-ALIGN:center;
+
+box-shadow:3px 3px 4px;
+margin:0 auto 10px;
+padding:10px;
+width:80%;
+}
+DIV.system_check { 
+BORDER: #a52a2a 1px solid;
+Z-INDEX: 1;
+FLOAT: none;
+VISIBILITY: visible;
+POSITION: static;
+background: lightgray;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-weight: normal;
+font-size: 16px;
+color: black;
+TEXT-ALIGN:left;
+
+box-shadow:3px 3px 4px;
+margin:0 auto 10px;
+padding:10px;
+width:80%;
+}
+
+/* date picker */
+
+.dpTbl { /* date picker background */
+border:thin solid black;
+background:white;
+box-shadow: 3px 3px 4px #000; /* shadow on modern browsers */
+}
+.dpTD {
+border: 0;
+width:35px;
+background-color: #8080ff;
+text-align:right;
+cursor:pointer;
+}
+.dpDayHighlight {
+border: 0;
+width:35px;
+background-color: red;
+text-align:right;
+cursor:pointer;
+}
+.dpTDHover {
+border: 0;
+width:35px;
+background-color: #004080;
+text-align:right;
+cursor:pointer;
+}
+
+/* MISC */
+
+/* Table type is used for UI tables type 1 */
+.table1 {
+  width:90%;
+  background: #eee;
+  border: 0px 0px 2px 2px solid #222;
+  margin: 0 auto;
+}
+.tableheader {
+font-weight: normal;
+background-color: #777C59;
+color: white;
+}
+.notavailable {
+font-weight:lighter;
+font-style:italic;
+color:#555555;
+}
+.label {
+font-weight:bold;
+font-style:normal;
+font-size:18px;
+color:black;
+background-color:#8080ff;
+}
+.table_index {
+background-color: #099713;
+}
+/*li {
+list-style-image: url(bullet.gif);
+}*/
+
+.header{
+background-image:url("");
+background-repeat:no-repeat;
+background-attachment:fixed;
+border:none;
+margin:0px;
+padding:0px;
+}
+input.inputerror{
+background-color:#7FA2B3;/*#fddbdb*/
+}
+textarea.texterror{
+background-color:#7FA2B3;
+}
+select.selecterror{
+background-color:#7FA2B3;
+}
+.OsRow{
+background-color:#234567;
+color:white;
+}
+
+/* CANVAS */
+
+#CanvasDiv{
+background:url(images/wood.jpg) #feb;
+border:1px outset #feb;/*立体边*/
+border-radius:15px 15px 15px 15px;/*圆角*/
+padding:1px;
+box-shadow: 5px 5px 6px #3B0B2E; /* 阴影 */
+}
+
+/* HEADER */
+
+#HeaderDiv{
+color:black;
+overflow:hidden;
+}
+/*按钮*/
+#HeaderDiv a{
+color: black;
+font-weight: normal;
+text-decoration: none;
+border:1px outset #feb;
+border-radius:7px;
+padding:3px 5px;
+box-shadow:2px 2px 3px #3B0B2E;
+margin-right:5px;
+background:none;
+}
+/*鼠标经过按钮*/
+#HeaderDiv a:hover{
+color: black;
+font-weight: normal;
+text-decoration: none;
+border:1px outset #feb;
+border-radius:7px;
+padding:3px 5px;
+color:red;
+font-weight:bold;
+margin-right:5px auto;
+box-shadow:2px 2px 15px red;
+}
+/*鼠标按下*/
+#HeaderDiv a:active{
+color: red;
+text-decoration: none;
+border:2px inset #F66636;
+border-radius:7px;
+padding:3px 5px;
+box-shadow:2px 2px 15px red inset;
+}
+
+#HeaderWrapDiv{
+}
+
+/* HEADER - APP INFO */
+
+#AppInfoDiv{
+float:left; /* REQUIRED: to the left */
+}
+#AppInfoCompanyDiv{
+display:table-cell; /* REQUIRED: as a cell */
+font-weight:bold;
+margin:5px auto;
+}
+#AppInfoUserDiv{
+display:table-cell; /* REQUIRED: as a cell */
+padding-left:5px;
+}
+#AppInfoModuleDiv{
+font-weight:bold;
+font-size:18px;
+padding:3px;
+}
+
+/* HEADER - QUICK MENU */
+
+#QuickMenuDiv{
+float:right; /* to the right side  */
+margin-top:3px;
+}
+#QuickMenuDiv ul{
+list-style:none; /* hide the bullets */
+}
+#QuickMenuDiv li{
+display:inline; /* items are inline */
+}
+
+/* BODY */
+
+#BodyDiv {
+clear:both;
+overflow:hidden;
+text-align:center; /* need to center some text/button on SelectSupplier.php */
+}
+#BodyWrapDiv{
+color:black;
+}
+
+/* BODY - MAIN MENU */
+
+#MainMenuDiv{
+float:left;
+white-space:nowrap;
+text-align:center; 
+width:11%;
+}
+#MainMenuDiv ul{
+margin:0 3px 0 0; 
+padding:0;
+}
+#MainMenuDiv li{
+list-style:none; /* REQUIRED */
+padding:0; /* REQUIRED */
+}
+
+/* links as buttons */
+
+#MainMenuDiv li a,
+#MainMenuDiv li a:hover,
+#MainMenuDiv li a:active,
+#MainMenuDiv .main_menu_selected a,
+#MainMenuDiv .main_menu_selected a:hover{ /* common styles */
+display:block; /* REQUIRED */
+color:black;
+text-decoration:none;
+background:none;
+border:1px outset #feb;
+border-radius:7px;
+box-shadow:2px 2px 13px #3B0B2E;
+padding:5px;
+margin-top:6px;
+margin-bottom:2px;
+}
+/*鼠标经过按钮*/
+#MainMenuDiv li a:hover{
+color:red;
+box-shadow:2px 2px 13px red;
+}
+/*鼠标经过按下的按钮*/
+#MainMenuDiv li a:active,
+#MainMenuDiv .main_menu_selected a:hover{ /* pressed */
+color:red;
+border:2px inset #feb;
+box-shadow:2px 2px 13px red inset;
+}
+/*按下的按钮*/
+#MainMenuDiv .main_menu_selected a{ /* the selected button */
+border:2px inset #feb;
+font-weight:bold;
+margin:5px auto;
+box-shadow:2px 2px 13px #8A0808 inset;
+}
+
+/* BODY - SUB MENU */
+
+#SubMenuDiv{
+display:table; /* display as table, sub menu will auto adjust width */
+text-align:left;
+background:url(images/desk.jpg) #631;
+border:1px inset #feb;
+border-radius:7px;
+box-shadow: 5px 5px 6px #3B0B2E inset; /* modern browser only! */
+margin:5px auto;
+padding:5px;
+width:87%;
+}
+#SubMenuDiv ul{
+background:url(images/wood.jpg) #feb;
+border:1px outset #feb;
+border-radius:7px;
+box-shadow: 5px 5px 16px #3B0B2E; /* shadow: modern browser only! */
+padding:0; /* REQUIRED: remove extra gaps (ex-bullets) */
+margin:5px;
+}
+#SubMenuDiv li{
+list-style:none; /* REQUIRED: hide bullets */
+}
+/* 中间菜单 */
+.menu_group_headers {
+background:url(images/desk.jpg) #631;
+border:3px outset #610B0B;
+border-radius:7px 7px 0 0;
+color:white;
+font-weight:bold;
+text-align:center;
+padding:2px;
+margin:-3px -3px 0;
+}
+
+.menu_group_item,.menu_group_item:hover{
+color:black;
+border:1px inset transparent;
+border-radius:1px;
+padding:2px;
+}
+/*鼠标经过*/
+.menu_group_item:hover{
+border-radius:5px 5px 5px 5px;/*圆角*/
+padding:2px;
+border:1px inset #feb;
+box-shadow:2px 2px 13px #8A0808 inset;/* 阴影 */
+}
+.menu_group_item a{
+color:black;
+text-decoration:none;
+text-align:left;
+}
+.menu_group_item a:hover{
+color:red;
+text-decoration:none;
+}
+
+.menu_group_item p {
+color: red; /* This is the color for bullets, I like it to be the same as the anchor color, but it's up to you */
+text-indent: -10px; /* this makes the bullet to appear as the li tag previously used */
+margin: 3px 3px 3px 12px;
+}
+
+#TransactionsDiv,#InquiriesDiv,#MaintenanceDiv{ 
+display:table-cell; 
+}
+#InquiriesDiv div{ /* header for standard reports/forms, custom reports */
+background:url("images/desk.jpg") #631;
+border:3px outset #663311;
+color:white;
+font-weight:bold;
+margin:0 -3px;
+padding:2px;
+}
+
+/* FOOTER */
+
+#FooterDiv{
+clear:both;
+color:black;
+overflow:hidden;
+}
+#FooterWrapDiv{
+}
+#FooterLogoDiv{
+/*background:white;*/
+float:left;
+padding:3px;
+margin:0px 3px 3px 3px;
+}
+#FooterVersionDiv{
+float:left;
+margin-left:10px;
+margin-top:17px;
+}
+#FooterTimeDiv{
+float:right;
+margin-top:17px;
+}
+
+/* END */

@@ -1,0 +1,86 @@
+msgid "No Price No Sales"
+msgstr ""
+
+msgid "Sales Any Way"
+msgstr ""
+
+msgid "Sales forbidden when no prices set for the stock and the customer."
+msgstr ""
+msgid "Stock Status_cqz"
+msgstr ""
+
+msgid "More_cqz"
+msgstr ""
+
+msgid "Obsolete_cqz"
+msgstr ""
+
+msgid "Normal_cqz"
+msgstr ""
+
+msgid "Issue To_cqz"
+msgstr ""
+
+msgid "InvoiceNo_cqz"
+msgstr ""
+
+msgid "A_Stock_cannot_transfer_cqz"
+msgstr ""
+
+msgid "D_Stock_cannot_transfer_cqz"
+msgstr ""
+
+msgid "K_Stock_cannot_transfer_cqz"
+msgstr ""
+
+msgid "Red_Meaning_Issue_Not_Enough_cqz"
+msgstr ""
+
+msgid "Issue_Back_With_Nagetive_Num_But_No_More_Than_Issued_cqz"
+msgstr ""
+""
+
+msgid "Print Work Receipt Note_cqz"
+msgstr ""
+
+msgid "New WO_cqz"
+msgstr ""
+
+msgid "Add New WO_cqz"
+msgstr ""
+
+msgid "Reprint Transfer Note_cqz"
+msgstr ""
+
+msgid "Reprint WOReceive Note_cqz"
+msgstr ""
+
+msgid "ChineseGL_Total"
+msgstr ""
+
+msgid "ChineseGL_Sign:"
+msgstr ""
+
+msgid "CNCERP MANUAL"
+msgstr ""
+
+msgid "file name_cqz"
+msgstr ""
+
+msgid "script name_cqz"
+msgstr ""
+
+msgid "belong to role_cqz"
+msgstr ""
+
+msgid "GL Accounts Init"
+msgstr ""
+
+msgid "Banked Paid to"
+msgstr ""
+
+msgid "Initialization of Accounts Settings"
+msgstr ""
+
+msgid "Change"
+msgstr ""
