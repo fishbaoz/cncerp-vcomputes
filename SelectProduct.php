@@ -76,7 +76,8 @@ if (!isset($_POST['Search']) AND (isset($_POST['Select']) OR isset($_SESSION['Se
 								stockmaster.volume,
 								stockmaster.grossweight,
 								stockcategory.categorydescription,
-								stockmaster.categoryid
+								stockmaster.categoryid,
+								stockmaster.barcode
 						FROM stockmaster INNER JOIN stockcategory
 						ON stockmaster.categoryid=stockcategory.categoryid
 						WHERE stockid='" . $StockID . "'", $db);
@@ -137,6 +138,10 @@ if (!isset($_POST['Search']) AND (isset($_POST['Select']) OR isset($_SESSION['Se
 	}
 	echo '</td><th class="number">' . _('Units') . ':</th>
 			<td class="select">' . $myrow['units'] . '</td></tr>';
+	echo '</td><th class="number">' . _('Barcode') . ':</th>
+			<td class="select">' .'<img src="includes/barcodepack/barcode.php?text=' . $myrow['barcode'] . '"/>'
+               . '</td></tr>';
+
 	echo '<tr><th class="number">' . _('Volume') . ':</th>
 			<td class="select" colspan="2">' . locale_number_format($myrow['volume'], 3) . '</td>
 			<th class="number">' . _('Weight') . ':</th>
@@ -455,7 +460,6 @@ if ($Its_A_Kitset_Assembly_Or_Dummy == false) {
 		}
 	}
      //header("Content-type: image/png");
-     echo '<img src="includes/barcodepack/barcode.php?text=testing" alt="testing" />';
 
 	echo '<div class="centre">' . $StockImgLink . '</div>';
 
@@ -595,7 +599,8 @@ if (isset($_POST['Search']) OR isset($_POST['Go']) OR isset($_POST['Next']) OR i
 							stockmaster.units,
 							stockmaster.mbflag,
 							stockmaster.discontinued,
-							stockmaster.decimalplaces
+							stockmaster.decimalplaces,
+							stockmaster.barcode
 						FROM stockmaster LEFT JOIN stockcategory
 						ON stockmaster.categoryid=stockcategory.categoryid,
 							locstock
@@ -617,7 +622,8 @@ if (isset($_POST['Search']) OR isset($_POST['Go']) OR isset($_POST['Next']) OR i
 							stockmaster.units,
 							stockmaster.mbflag,
 							stockmaster.discontinued,
-							stockmaster.decimalplaces
+							stockmaster.decimalplaces,
+							stockmaster.barcode
 						FROM stockmaster INNER JOIN locstock
 						ON stockmaster.stockid=locstock.stockid
 						WHERE description " . LIKE . " '$SearchString'
@@ -641,7 +647,8 @@ if (isset($_POST['Search']) OR isset($_POST['Go']) OR isset($_POST['Next']) OR i
 							stockmaster.discontinued,
 							SUM(locstock.quantity) AS qoh,
 							stockmaster.units,
-							stockmaster.decimalplaces
+							stockmaster.decimalplaces,
+							stockmaster.barcode
 						FROM stockmaster
 						INNER JOIN stockcategory
 						ON stockmaster.categoryid=stockcategory.categoryid
@@ -663,7 +670,8 @@ if (isset($_POST['Search']) OR isset($_POST['Go']) OR isset($_POST['Next']) OR i
 						stockmaster.discontinued,
 						sum(locstock.quantity) as qoh,
 						stockmaster.units,
-						stockmaster.decimalplaces
+						stockmaster.decimalplaces,
+						stockmaster.barcode
 					FROM stockmaster INNER JOIN locstock
 					ON stockmaster.stockid=locstock.stockid
 					WHERE stockmaster.stockid " . LIKE . " '%" . $_POST['StockCode'] . "%'
@@ -686,7 +694,8 @@ if (isset($_POST['Search']) OR isset($_POST['Go']) OR isset($_POST['Next']) OR i
 						stockmaster.discontinued,
 						SUM(locstock.quantity) AS qoh,
 						stockmaster.units,
-						stockmaster.decimalplaces
+						stockmaster.decimalplaces,
+						stockmaster.barcode
 					FROM stockmaster
 					LEFT JOIN stockcategory
 					ON stockmaster.categoryid=stockcategory.categoryid,
@@ -708,7 +717,8 @@ if (isset($_POST['Search']) OR isset($_POST['Go']) OR isset($_POST['Next']) OR i
 						stockmaster.discontinued,
 						SUM(locstock.quantity) AS qoh,
 						stockmaster.units,
-						stockmaster.decimalplaces
+						stockmaster.decimalplaces,
+						stockmaster.barcode
 					FROM stockmaster INNER JOIN locstock
 					ON stockmaster.stockid=locstock.stockid
 					WHERE categoryid='" . $_POST['StockCat'] . "'
@@ -815,6 +825,7 @@ if (isset($SearchResult) AND !isset($_POST['Select'])) {
 				<td title="'. $myrow['longdescription'] . '">' . $myrow['description'] . '</td>
 				<td class="number">' . $qoh . '</td>
 				<td>' . $myrow['units'] . '</td>
+				<td> barcode' . $myrow['barcode'] . '</td>
 				<td><a target="_blank" href="' . $RootPath . '/StockStatus.php?StockID=' . $myrow['stockid'].'">' . _('View') . '</a></td>
 				</tr>';
 /*
