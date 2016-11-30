@@ -825,7 +825,6 @@ if (isset($SearchResult) AND !isset($_POST['Select'])) {
 				<td title="'. $myrow['longdescription'] . '">' . $myrow['description'] . '</td>
 				<td class="number">' . $qoh . '</td>
 				<td>' . $myrow['units'] . '</td>
-				<td> barcode' . $myrow['barcode'] . '</td>
 				<td><a target="_blank" href="' . $RootPath . '/StockStatus.php?StockID=' . $myrow['stockid'].'">' . _('View') . '</a></td>
 				</tr>';
 /*
