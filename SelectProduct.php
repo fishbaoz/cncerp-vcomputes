@@ -149,7 +149,7 @@ if (!isset($_POST['Search']) AND (isset($_POST['Select']) OR isset($_SESSION['Se
 			<th class="number">' . _('EOQ') . ':</th>
 			<td class="select">' . locale_number_format($myrow['eoq'], $myrow['decimalplaces']) . '</td></tr>';
 	if (in_array($PricesSecurity, $_SESSION['AllowedPageSecurityTokens']) OR !isset($PricesSecurity)) {
-		echo '<tr><th colspan="2">' . _('Sell Price') . ':</th>
+		echo '<tr><th>' . _('Sell Price') . ':</th>
 				<td class="select">';
 		$PriceResult = DB_query("SELECT typeabbrev,
 										price
@@ -209,6 +209,10 @@ if (!isset($_POST['Search']) AND (isset($_POST['Select']) OR isset($_SESSION['Se
 				<th class="number">' . _('Cost') . '</th>
 				<td class="select">' . locale_number_format($Cost, $_SESSION['StandardCostDecimalPlaces']) . '</td>
 			</tr>';
+		echo '<tr>
+				<th class="number">' . _('Description') . '</th>
+				<td class="select" colspan="500" >' . nl2br($myrow['longdescription'])  . ' </td>
+		</tr>';
 	} //end of if PricesSecuirty allows viewing of prices
 	echo '</table>'; //end of first nested table
 	// Item Category Property mod: display the item properties
